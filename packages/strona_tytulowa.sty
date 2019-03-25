@@ -1,0 +1,62 @@
+\def\stronatytulowa{
+    \vskip0.5in
+
+    \begin{center}
+        \hyphenpenalty=10000\Large\expandafter{\textsc{\textbf{\@uczelnia}}}
+    \end{center}
+
+    \begin{center}
+        \large\textbf{\@wydzial}
+    \end{center}
+    \vskip0.5in
+
+    \begin{center}
+        \hyphenpenalty=10000\Large\expandafter{\@praca}
+    \end{center}
+
+	
+	\begin{center}
+        \hyphenpenalty=10000\Large Kierunek: \expandafter{\@kierunek}
+    \end{center}
+    \vskip0.5in
+
+
+    \begin{center}
+ \hyphenpenalty=10000\LARGE\expandafter{\textbf{\textsc{\@title}}}
+    \end{center}
+    \vskip0.5in
+
+ 	\begin{center}
+        \hyphenpenalty=10000\Large\expandafter{\@author}
+    \end{center}
+    \vskip0.5in
+
+    \vskip0.5in
+    \begin{flushright}
+        \begin{tabular}{l}
+        Promotor:  \\
+        \@promotor \\ \\
+			\ifnum\pdfstrcmp{\@konsultant}{}=0
+			\else
+			 Konsultant:  \\
+        \@konsultant \\
+			\fi
+        \end{tabular}
+    \end{flushright}
+\vskip0.5in
+\ifnum\pdfstrcmp{\@konsultant}{}=0
+    \begin{flushleft}
+        \begin{tabular}{l}
+        Pracę akceptuję:\\
+        \\
+        ...................................... \\
+            (data i podpis promotora)
+        \end{tabular}
+    \end{flushleft}
+    \vfill
+
+    \begin{center}
+        \rm \@miasto, \@miesiac \,\@rok
+    \end{center}
+    \newpage
+}

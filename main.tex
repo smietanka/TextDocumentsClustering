@@ -1,0 +1,65 @@
+\documentclass[a4paper,12pt,openany]{book}
+\input{Pakiety/pakiety.tex}
+\input{Ustawienia/ustawienia.tex}
+
+
+\author{Kacper Drapała}
+\kierunek{Informatyka}
+\grupa{41INF-SSI-NP}
+\title{System do klasteryzacji dokumentów tekstowych}
+\tytulAngielski{A system for clustering text documents}
+\uczelnia{Uniwersytet Zielonogórski}
+\wydzial{Wydział Informatyki, Elektrotechniki i Automatyki}
+\praca{Praca dyplomowa}
+\promotor{Dr inż. Marek Kowal}
+\konsultant{}
+\miasto{Zielona Góra}
+\miesiac{Luty}
+\rok{2018}
+\dzien{13}
+\mm{05}
+
+\begin{document}
+\pagenumbering{roman}
+
+\thispagestyle{empty}
+\stronatytulowa
+
+\thispagestyle{empty}
+\pustastrona
+\newpage
+
+\normalsize
+\input{Streszczenie/Streszczenie.tex}
+\newpage
+\tableofcontents
+\newpage
+ \listoffigures
+\newpage
+\listoftables
+\newpage
+\lstlistoflistings
+\newpage
+
+\newcounter{licznikStron}
+\setcounter{licznikStron}{\value{page}}
+\setcounter{licznikStron}{1}
+\pagenumbering{arabic}
+\setcounter{page}{\value{licznikStron}}
+
+\input{Rozdzialy/rozdzial1.tex}
+\input{Rozdzialy/rozdzial2.tex}
+\input{Rozdzialy/rozdzial3.tex}
+\input{Rozdzialy/rozdzial4.tex}
+
+%\begin{appendix}
+%	\appendix
+%	\input{Dodatki/dodatek_a.tex}
+%	\input{Dodatki/dodatek_b.tex}
+%\end{appendix}
+
+\begin{flushleft}
+	\bibliography{Bibliografia/bibliografia}
+\end{flushleft}
+
+\end{document}
